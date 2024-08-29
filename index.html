@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfabeto</title>
     <style>
+
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -24,7 +26,209 @@
 <body>
     <h1>O Alfabeto</h1>
     <p class="alfabeto">
-        A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+        
+       <li><a href="index02.html">Proximo</a></li>
+       
     </p>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+    </style>
+<body>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura total da viewport */
+            
+            color: rgb(0, 0, 0);
+        }
+    </style>
+
+<style>
+    /* Estilos para centralizar o texto */
+    body {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 100vh; /* Altura total da visualização */
+        margin: 0; /* Remove a margem padrão */
+        font-family: Arial, sans-serif; /* Fonte opcional */
+    }
+
+    .centralizado {
+        font-size: 2em; /* Tamanho da fonte opcional */
+    }
+
+
+
+    /* Estilo para o fundo da página */
+    body {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 100vh; /* Altura total da visualização */
+        margin: 0; /* Remove a margem padrão */
+        background-color: #ffffff;; /* Cor de fundo da página */
+        font-family: Arial, sans-serif; /* Fonte opcional */
+    }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .alfabeto {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .letra {
+            padding: 10px;
+            font-size: 1.5em;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #2249c9;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .letra:hover {
+            background-color: #1825e4;
+        }
+
+        .palavra-formada {
+            font-size: 2em;
+            margin: 20px;
+            color: #333;
+        }
+
+        .botoes {
+            margin-top: 20px;
+        }
+
+        .botao {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        .botao:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="alfabeto">
+        <!-- Letras do alfabeto -->
+        <div class="letra" onclick="adicionarLetra('Amor')">A</div>
+        <div class="letra" onclick="adicionarLetra('Boneca')">B</div>
+        <div class="letra" onclick="adicionarLetra('Casa')">C</div>
+        <div class="letra" onclick="adicionarLetra('Dado')">D</div>
+        <div class="letra" onclick="adicionarLetra('Elefante')">E</div>
+        <div class="letra" onclick="adicionarLetra('Faca')">F</div>
+        <div class="letra" onclick="adicionarLetra('Galinha')">G</div>
+        <div class="letra" onclick="adicionarLetra('Hilecóptero')">H</div>
+        <div class="letra" onclick="adicionarLetra('Indio')">I</div>
+        <div class="letra" onclick="adicionarLetra('Jacare')">J</div>
+        <div class="letra" onclick="adicionarLetra('Kakau')">K</div>
+        <div class="letra" onclick="adicionarLetra('Lapis')">L</div>
+        <div class="letra" onclick="adicionarLetra('Macaco')">M</div>
+        <div class="letra" onclick="adicionarLetra('Navio')">N</div>
+        <div class="letra" onclick="adicionarLetra('Ovo')">O</div>
+        <div class="letra" onclick="adicionarLetra('Pato')">P</div>
+        <div class="letra" onclick="adicionarLetra('Queijo')">Q</div>
+        <div class="letra" onclick="adicionarLetra('Rato')">R</div>
+        <div class="letra" onclick="adicionarLetra('Sacola')">S</div>
+        <div class="letra" onclick="adicionarLetra('Tatu')">T</div>
+        <div class="letra" onclick="adicionarLetra('Uva')">U</div>
+        <div class="letra" onclick="adicionarLetra('Vasoura')">V</div>
+        <div class="letra" onclick="adicionarLetra('Wilson')">W</div>
+        <div class="letra" onclick="adicionarLetra('Xicara')">X</div>
+        <div class="letra" onclick="adicionarLetra('Yakult')">Y</div>
+        <div class="letra" onclick="adicionarLetra('Zebra')">Z</div>
+    </div>
+
+    <div class="palavra-formada" id="palavra"></div>
+
+    <div class="botoes">
+        <button class="botao" onclick="limparPalavra()">Limpar</button>
+        <button class="botao" onclick="finalizarPalavra()">Finalizar</button>
+    </div>
+
+    <script>
+        function adicionarLetra(letra) {
+            const palavraDiv = document.getElementById('palavra');
+            palavraDiv.textContent += letra;
+        }
+
+        function limparPalavra() {
+            const palavraDiv = document.getElementById('palavra');
+            palavraDiv.textContent = '';
+        }
+
+        function finalizarPalavra() {
+            const palavraDiv = document.getElementById('palavra');
+            alert('Palavra formada: ' + palavraDiv.textContent);
+            palavraDiv.textContent = ''; // Limpa a palavra após mostrar o alerta
+        }
+    </script>
+   
+    <style>
+
+        /* Define o estilo inicial do elemento */
+        .animacao {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: deslizar 3s infinite;
+        }
+
+        /* Define a animação */
+        @keyframes deslizar {
+            from {
+                left: 0;
+            }
+            to {
+                left: 100%;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+   
 </body>
 </html>
